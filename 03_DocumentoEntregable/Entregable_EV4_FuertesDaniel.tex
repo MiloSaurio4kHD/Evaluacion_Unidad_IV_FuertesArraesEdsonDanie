@@ -1,0 +1,99 @@
+% ============================================================
+%  ENTREGABLE PARA EL SGA -- CARÁTULA (una sola página)
+%  Prueba Práctica -- Unidad IV -- Paralelo B
+%  Ingeniería de Requisitos (ISR-401) -- UTEQ
+%  Estudiante: Fuertes Arraes Edson Daniel
+%
+%  Archivo principal : Entregable_EV4_FuertesDaniel.tex
+%  Compilación       : pdflatex Entregable_EV4_FuertesDaniel
+%                      (una sola pasada; no usa bibliografía)
+%  Requiere:
+%      evidencias/ResumenCuestionario_FuertesDaniel.png
+%      evidencias/RevisionIntento_FuertesDaniel.png
+%      evidencias/ResumenCuestionario_FuertesDaniel.pdf
+%      evidencias/RevisionIntento_FuertesDaniel.pdf
+% ============================================================
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+% (sin babel-spanish: no esta instalado en todos los sistemas)
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabla}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[a4paper,top=1.4cm,bottom=1.2cm,left=1.8cm,right=1.8cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+\usepackage{pdfpages}
+
+\definecolor{darkblue}{HTML}{1A3A5C}
+\captionsetup{font=footnotesize,labelfont=bf,skip=3pt}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+
+\begin{document}
+	
+	\begin{center}
+		
+		{\bfseries\normalsize UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO}\\[2pt]
+		{\bfseries\small FACULTAD DE CIENCIAS DE LA INGENIERÍA \textbullet\ CARRERA DE INGENIERÍA DE SOFTWARE}\\[5pt]
+		{\color{darkblue}\rule{0.92\linewidth}{1pt}}\\[5pt]
+		
+		{\bfseries\small PRUEBA PRÁCTICA --- UNIDAD IV \textbullet\ PARALELO B}\\[1pt]
+		{\small VALIDACIÓN, GESTIÓN, HERRAMIENTAS Y ESTÁNDARES DE REQUISITOS}\\[1pt]
+		{\small CASO: SISTEMA DE RESERVA DE CITAS MÉDICAS}\\[6pt]
+		
+		{\small
+			\begin{tabular}{@{}r@{\hspace{6pt}}l@{}}
+				\bfseries ASIGNATURA: & INGENIERÍA DE REQUISITOS (ISR-401)\\
+				\bfseries DOCENTE:    & ING. GLEISTON CICERÓN GUERRERO ULLOA, PhD\\
+				\bfseries ESTUDIANTE: & \textbf{FUERTES ARRAES EDSON DANIEL} --- CI: 0929115087\\
+				\bfseries CORREO:     & efuertesa2@uteq.edu.ec\\
+				\bfseries CURSO:      & CUARTO SEMESTRE PARALELO ``B''\\
+				\bfseries FECHA:      & 12 de agosto de 2026\\
+		\end{tabular}}\\[6pt]
+		
+		{\bfseries\small REPOSITORIO:}\\[1pt]
+		{\small\url{https://github.com/MiloSaurio4kHD/Evaluacion_Unidad_IV_FuertesArraesEdsonDanie.git}}\\[6pt]
+		
+		{\color{darkblue}\rule{0.92\linewidth}{0.6pt}}\\[4pt]
+		
+		% ── Evidencia 1: resumen del cuestionario ──────────────────
+		\IfFileExists{evidencias/ResumenCuestionario_FuertesDaniel.png}{%
+			\includegraphics[width=\linewidth,height=0.27\textheight,keepaspectratio]%
+			{evidencias/ResumenCuestionario_FuertesDaniel.png}}{%
+			\fbox{\parbox[c][3.5cm][c]{0.88\linewidth}{\centering FALTA: captura del RESUMEN del cuestionario}}}
+		\captionof{figure}{Resumen de resultados del cuestionario en el SGA.}
+		
+		\vspace{6pt}
+		
+		% ── Evidencia 2: revisión del intento ──────────────────────
+		\IfFileExists{evidencias/RevisionIntento_FuertesDaniel.png}{%
+			\includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]%
+			{evidencias/RevisionIntento_FuertesDaniel.png}}{%
+			\fbox{\parbox[c][3.5cm][c]{0.88\linewidth}{\centering FALTA: captura de la EVALUACIÓN (intento)}}}
+		\captionof{figure}{Revisión del intento de la evaluación en el SGA.}
+		
+	\end{center}
+	
+	% ============================================================
+	%  ANEXOS -- PDF COMPLETOS DE LAS EVIDENCIAS DEL SGA
+	%  pages=-  inserta TODAS las paginas de cada PDF.
+	%  Para un rango concreto usa por ejemplo  pages={1-4}
+	% ============================================================
+	\IfFileExists{evidencias/ResumenCuestionario_FuertesDaniel.pdf}{%
+		\includepdf[pages=-,scale=0.92,frame,pagecommand={\thispagestyle{empty}}]%
+		{evidencias/ResumenCuestionario_FuertesDaniel.pdf}}{%
+		\begin{center}\fbox{\parbox[c][3.5cm][c]{0.88\linewidth}{\centering FALTA: PDF del RESUMEN del cuestionario}}\end{center}}
+	
+	\IfFileExists{evidencias/RevisionIntento_FuertesDaniel.pdf}{%
+		\includepdf[pages=-,scale=0.92,frame,pagecommand={\thispagestyle{empty}}]%
+		{evidencias/RevisionIntento_FuertesDaniel.pdf}}{%
+		\begin{center}\fbox{\parbox[c][3.5cm][c]{0.88\linewidth}{\centering FALTA: PDF de la REVISIÓN DEL INTENTO}}\end{center}}
+	
+\end{document}
