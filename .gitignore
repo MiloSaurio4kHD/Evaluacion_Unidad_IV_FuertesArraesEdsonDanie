@@ -1,15 +1,30 @@
-﻿*.aux
+# Archivos intermedios de LaTeX
+*.aux
 *.log
 *.out
 *.toc
 *.bbl
-*.bcf
 *.blg
+*.bcf
 *.run.xml
-*.synctex.gz
 *.fls
 *.fdb_latexmk
 *.lof
 *.lot
 *.lol
-*.synctex*
+*.synctex.gz
+*.synctex(busy)
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# Sistema operativo
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editores
+*~
+*.bak
+.vscode/
